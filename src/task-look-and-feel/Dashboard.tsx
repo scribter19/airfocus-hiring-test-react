@@ -4,7 +4,6 @@ import { articles } from '../data'
 import { ArticleCard } from './ArticleCard'
 
 export const Dashboard: React.FC = () => {
-  // TODO
   return (
     <div className={containerStyle}>
       {articles.map((article, index) => (
@@ -15,5 +14,7 @@ export const Dashboard: React.FC = () => {
 }
 
 const containerStyle = css`
-  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 `
